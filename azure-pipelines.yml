@@ -24,7 +24,7 @@ steps:
     ls $(Build.SourcesDirectory)
 
 - script: |
-    ls $(Build.Repository.Name)
+    ls $(Build.SourcesDirectory)/$(Build.Repository.Name)
 
 - script: |
     python -m pip install --upgrade pip
