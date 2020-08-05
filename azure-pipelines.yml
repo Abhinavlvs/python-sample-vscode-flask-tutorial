@@ -15,7 +15,6 @@ strategy:
 
 steps:
 - checkout: self
-- checkout: AzureDataFactory
 - task: UsePythonVersion@0
   inputs:
     versionSpec: '$(python.version)'
@@ -23,6 +22,9 @@ steps:
 
 - script: |
     ls $(Build.SourcesDirectory)
+
+- script: |
+    ls $(Build.Repository.Name)
 
 - script: |
     python -m pip install --upgrade pip
